@@ -17,6 +17,7 @@ public class ListaTareas {
 		tareasPendientes.add(0,"Pan"); // agrego en el indice 0, y agrego pan
 
 		tareasPendientes.set(0, "Café"); //poner en posicion y cambia  es decir elimina el que este en el indice 0
+		tareasPendientes.add("Locas");
 		
 
 		tareasPendientes.remove(0); // remvoer
