@@ -32,7 +32,7 @@ public class Ejercicio1 {
 
 		}
 
-		System.out.println("\n----String nuevo----\n");
+		System.out.println("\n----Palabra nueva----\n");
 
 		cadenaCaracteres.add(0, "Pascal");
 
@@ -41,29 +41,37 @@ public class Ejercicio1 {
 			System.out.println(cadenaCaracteres.get(i));
 
 		}
-		System.out.println("\nPosición 3(2º indice) recuperada " + "\n" + cadenaCaracteres.get(2));
+		System.out.println("\nPosición 3(2º indice) recuperada " + "\n" + cadenaCaracteres.get(2) + "\n");
 
 		String elementoABuscar = "Python";
 
-		// Variable para almacenar la posición del elemento (si se encuentra)
-		int posicion = -1;
-
-		// Iterar sobre el array
+		boolean consulta = false;
 		for (int i = 0; i < cadenaCaracteres.size(); i++) {
-			// Comprobar si el elemento en la posición actual es igual al elemento a buscar
-			if (cadenaCaracteres.contains(elementoABuscar)) {
-				// Almacenar la posición del elemento
-				posicion = i;
-				// Salir del bucle una vez que se encuentra el elemento
-				break;
+			if (cadenaCaracteres.get(i) == (elementoABuscar)) {
+				System.out.println("La palabra: " + "[" + elementoABuscar + "]"
+						+ " está presente en el ArrayList, en la posicion: " + (i + 1));
+				consulta = true;
 			}
+
+		}
+		if (!consulta) {
+			System.out.println("La palabra " + "[" + elementoABuscar + "]" + " no está presente en el ArrayList.");
+
+		}
+		cadenaCaracteres.remove(0);
+		
+		System.out.println("\nLista con PASCAL eliminado:");
+		for (String string : cadenaCaracteres) {
+			System.out.println(string);
+			
+		}
+		cadenaCaracteres.clear();
+		
+		System.out.println("\nDespués de borrar:");
+		for (String string : cadenaCaracteres) {
+			System.out.println(string);
+			
 		}
 
-		// Mostrar el resultado
-		if (posicion != -1) {
-			System.out.println("El elemento " + elementoABuscar + " se encuentra en la posición " + posicion);
-		} else {
-			System.out.println("El elemento " + elementoABuscar + " no se encuentra en el array.");
-		}
 	}
 }
