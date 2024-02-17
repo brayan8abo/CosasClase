@@ -10,19 +10,45 @@ public class Coche {
 //        devolver coche: se introduce la matrícula del coche, se comprueba que está en la lista de los coches alquilados. Si es así, se borra el coche de la lista de los coches alquilados y se inserta en la lista de los coches libres.
 //        Ordenar lista (cualquiera de las dos) por marca.
 
-	String matricula;
-	String marca;
-	String modelo;
+	 private String matricula;
+	 private String marca;
+	 private String modelo;
+
 	public Coche(String matricula, String marca, String modelo) {
 		super();
 		this.matricula = matricula;
 		this.marca = marca;
 		this.modelo = modelo;
 	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
 	@Override
 	public String toString() {
-		return "Coche [matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + "]";
+		return "Coche [Matricula= " + getMatricula() + ", Marc)= " + getMarca() + ", Modelo= " + getModelo()
+				+ "]";
 	}
 
-	}
-
+}
